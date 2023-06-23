@@ -7,7 +7,7 @@ const Hero = () => {
       <Navbar />
       <Spline scene="https://prod.spline.design/qayC9tyamImEVXGn/scene.splinecode" />
       <div className="absolute top-[12rem] left-[138px]">
-        <h1 className="text-[#C8FAFA] font-bold text-[80px] leading-[1.2]">
+        <h1 className="text-[#C8FAFA] font-bold text-[80px] leading-[1.2] mt-10">
           Welcome to <br /> my portfolio
         </h1>
         <h2 className="text-[#C8FAFA] text-[60px]">Jazper Ydio</h2>

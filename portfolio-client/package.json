@@ -19,7 +19,8 @@
     "@splinetool/runtime": "^0.9.371",
     "framer-motion": "^10.12.16",
     "react": "^17.0.0 || ^18.0.0",
-    "react-dom": "^17.0.0 || ^18.0.0"
+    "react-dom": "^17.0.0 || ^18.0.0",
+    "react-parallax-tilt": "^1.7.148"
   },
   "devDependencies": {
     "@types/react": "^18.0.37",
