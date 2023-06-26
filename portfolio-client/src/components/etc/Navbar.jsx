@@ -10,6 +10,7 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import Logo from "../../assets/logo.svg";
+import { Link } from "@mui/material";
 
 const pages = ["Home", "Projects", "Technologies", "About"];
 
@@ -77,7 +78,8 @@ const Navbar = () => {
           >
             <img src={Logo} alt="logo" className="ml-[-30px]" />
             {pages.map((page) => (
-              <Button
+              <Link
+                href={"#" + page}
                 key={page}
                 onClick={handleCloseNavMenu}
                 sx={{
@@ -94,7 +96,7 @@ const Navbar = () => {
                 }}
               >
                 {page}
-              </Button>
+              </Link>
             ))}
           </Box>
         </Toolbar>
