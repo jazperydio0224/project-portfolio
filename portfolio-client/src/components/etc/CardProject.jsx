@@ -57,12 +57,13 @@ const CardProject = ({ title, description }) => {
         <CardActions>
           <Button
             sx={{
-              border: "1px solid #F47D7D",
               background: "rgba(244, 125, 125, 0.5)",
               color: "#fff",
               backdropFilter: "blur(1rem)",
+              outline: "none",
               ":hover": {
                 background: "transparent",
+                border: "1px solid #F47D7D",
                 color: "#fff",
                 fontWeight: 700,
                 letterSpacing: "1px",
@@ -75,12 +76,13 @@ const CardProject = ({ title, description }) => {
           </Button>
           <Button
             sx={{
-              border: "1px solid #F47D7D",
               background: "rgba(244, 125, 125, 0.5)",
               color: "#fff",
               backdropFilter: "blur(1rem)",
+              outline: "none",
               ":hover": {
                 background: "transparent",
+                border: "1px solid #F47D7D",
                 color: "#fff",
                 fontWeight: 700,
                 letterSpacing: "1px",

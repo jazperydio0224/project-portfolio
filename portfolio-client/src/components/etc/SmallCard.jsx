@@ -3,66 +3,11 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import nuliv from "../../assets/nuliv.png";
-import { Box, Stack } from "@mui/material";
+import { Stack } from "@mui/material";
+import StarIcon from "@mui/icons-material/Star";
 
 const SmallCard = () => {
   return (
-    // <Card
-    //   sx={{
-    //     position: "relative",
-    //     width: "350px",
-    //     height: "190px",
-    //     background: "#fff",
-    //     borderRadius: "20px",
-    //     boxShadow: "0 35px 85px rgba(0,0,0,0.15)",
-    //     transition: "0.5s",
-    //     ":hover": {
-    //       height: "450px",
-    //     },
-    //   }}
-    // >
-    //   <Box
-    //     sx={{
-    //       position: "absolute",
-    //       top: "-50px",
-    //       left: "50%",
-    //       transform: "translateX(-50%)",
-    //       width: "150px",
-    //       height: "150px",
-    //       background: "blue",
-    //       borderRadius: "20px",
-    //       boxShadow: "0 11px 50px rgba(0,0,0,0.35)",
-    //     }}
-    //   >
-    //     <img
-    //       className="absolute top-0 left-0 w-full h-full object-cover z-50"
-    //       src={nuliv}
-    //       alt="nuliv"
-    //     />
-    //   </Box>
-    //   {/* <div className="imgBox">
-    //     <img
-    //       className="absolute top-0 left-0 w-full h-full object-cover"
-    //       src={nuliv}
-    //       alt="nuliv"
-    //     />
-    //   </div> */}
-    //   <CardContent>
-    //     <Typography
-    //       sx={{ textAlign: "center" }}
-    //       gutterBottom
-    //       variant="h5"
-    //       component="div"
-    //     >
-    //       hello
-    //     </Typography>
-    //     <Typography variant="body2" sx={{ color: "#000" }}>
-    //       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum,
-    //       natus?
-    //     </Typography>
-    //   </CardContent>
-    // </Card>
-
     <Card
       sx={{
         width: "320px",
@@ -113,12 +58,26 @@ const SmallCard = () => {
           obcaecati praesentium?
         </Typography>
         <Typography variant="small">rating</Typography>
-        <Stack direction="row" gap={2}>
-          <span>⭐️</span>
-          <span>⭐️</span>
-          <span>⭐️</span>
-          <span>⭐️</span>
-          <span>⭐️</span>
+        <Stack direction="row" gap={1}>
+          <span>
+            <StarIcon sx={{ fontSize: "30px", color: "#FDB813" }} />
+          </span>
+          <span>
+            {" "}
+            <StarIcon sx={{ fontSize: "30px", color: "#FDB813" }} />
+          </span>
+          <span>
+            {" "}
+            <StarIcon sx={{ fontSize: "30px", color: "#FDB813" }} />
+          </span>
+          <span>
+            {" "}
+            <StarIcon sx={{ fontSize: "30px", color: "#FDB813" }} />
+          </span>
+          <span>
+            {" "}
+            <StarIcon sx={{ fontSize: "30px", color: "#FDB813" }} />
+          </span>
         </Stack>
       </CardContent>
     </Card>

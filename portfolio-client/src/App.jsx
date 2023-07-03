@@ -8,10 +8,40 @@ const App = () => {
   return (
     <main>
       <Hero />
-      <Projects />
-      <Technologies />
-      <About />
-      <Footer />
+      <section className="w-[100vw] h-auto relative">
+        <div className="gradient-bg">
+          <div className="gradient-container">
+            <div className="g1"></div>
+            <div className="g2"></div>
+            <div className="g3"></div>
+            <div className="g4"></div>
+            <div className="g5"></div>
+            <div className="g6"></div>
+            <div className="g7"></div>
+            <div className="interactive"></div>
+            <Projects />
+            <Technologies />
+            <About />
+            <Footer />
+          </div>
+        </div>
+      </section>
+
+      {/* <section className="w-[100vw] h-auto relative"> */}
+      {/* <div className="gradient-bg">
+        <div className="gradient-container">
+          <div className="g1"></div>
+          <div className="g2"></div>
+          <div className="g3"></div>
+          <div className="g4"></div>
+          <div className="g5"></div>
+          <div className="interactive"></div>
+          <About />
+          <Footer />
+        </div>
+      </div> */}
+
+      {/* </section> */}
     </main>
   );
 };

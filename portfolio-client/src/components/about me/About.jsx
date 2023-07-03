@@ -1,4 +1,5 @@
 import { Typography, Box, Grid, Paper, Container } from "@mui/material";
+import { motion } from "framer-motion";
 import { styled } from "@mui/material/styles";
 import avatar from "../../assets/avatar.jpg";
 import AboutCard from "../etc/AboutCard";
@@ -11,7 +12,14 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 const About = () => {
   return (
-    <section className="section section-padding mt-20 mb-20">
+    <motion.section
+      initial={{ opacity: 0, x: "-100vw" }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ delay: 0.6, duration: 2 }}
+      viewport={{ once: true, amount: 0 }}
+      className=" section-padding "
+      id="About"
+    >
       <Typography variant="h3" className="text-[#C8FAFA] title">
         About Me
       </Typography>
@@ -32,19 +40,44 @@ const About = () => {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
+                borderRadius: "50%",
+                outline: "none",
+                width: "400px",
+                maxHeight: "400px",
+                background: "transparent",
               }}
             >
-              <Box>
+              <Box sx={{ border: "none", outline: "none" }}>
                 <img
                   src={avatar}
                   alt="avatar"
-                  className="w-[400px] h-[400px] rounded-full object-cover object-top"
+                  className="w-[400px] h-[400px] rounded-full object-cover object-top border-none outline-none"
                 />
               </Box>
             </Item>
           </Grid>
           <Grid item md={6}>
-            <Item sx={{ padding: "10px 20px" }}>
+            <Item
+              className="parallax-effect-glare-scale"
+              sx={{
+                padding: "20px 30px",
+                width: "100%",
+                maxHeight: "100%",
+                boxShadow: "1.3rem 1.3rem 1.3rem rgba(0,0,0,0.5)",
+                borderRadius: "1rem",
+
+                backdropFilter: "blur(1rem)",
+                background: "rgba(255,255,255,0.2) 0% 0% no-repeat padding-box",
+                color: "#fff",
+                borderTopColor: "rgba(225,225,225,0.5)",
+                borderLeftColor: "rgba(225,225,225,0.5)",
+                borderBottomColor: "rgba(255,255,255,0.1 )",
+                borderRightColor: "rgba(255,255,255,0.1)",
+
+                cursor: "pointer",
+                overflow: "hidden",
+              }}
+            >
               <Typography variant="h3">Jazper Ydio</Typography>
               <Typography variant="body1" textAlign="left" mt={5}>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
@@ -63,11 +96,24 @@ const About = () => {
             </Item>
           </Grid>
         </Grid>
+        <Typography variant="h3" sx={{ color: "#C8FAFA", marginTop: 10 }}>
+          Work Experiences
+        </Typography>
+        <Container
+          sx={{
+            display: "flex",
+            flexDirection: "row",
+            gap: 2,
+            marginTop: 10,
+            marginBottom: 10,
+          }}
+        >
+          <AboutCard />
+          <AboutCard />
+          <AboutCard />
+        </Container>
       </Box>
-      {/* <Container >
-        <AboutCard />
-      </Container> */}
-    </section>
+    </motion.section>
   );
 };
 
